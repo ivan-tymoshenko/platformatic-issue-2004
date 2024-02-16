@@ -1,0 +1,26 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v1.22.0/composer",
+  "composer": {
+    "services": [
+      {
+        "id": "test-service",
+        "openapi": {
+          "url": "/documentation/json",
+          "prefix": "/test-service"
+        }
+      }
+    ],
+    "refreshTimeout": 1000
+  },
+  "watch": true,
+  "plugins": {
+    "paths": [
+      {
+        "path": "./plugins",
+        "encapsulate": false
+      },
+      "./routes"
+    ],
+    "typescript": "{PLT_TEST_COMPOSER_TYPESCRIPT}"
+  }
+}
